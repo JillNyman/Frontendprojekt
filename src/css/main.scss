@@ -1,0 +1,188 @@
+@use "frames";
+@use "searchresult";
+@use "topliststreamers";
+@use "comingsoon";
+
+$homebody: rgb(244, 159, 81);
+$florence: rgb(247, 204, 173);
+$tropicalbreeze: rgb(149, 199, 194);
+$springwater: rgb(190, 228, 231);
+$flamingopink: rgb(244, 144, 185);
+$tequilasunrise: rgb(255, 212, 229);
+$greytext: #504c49;
+
+
+
+$black: #0d1b2a;
+$darkblue: #1b263b;
+$blue: #415a77;
+$bold: 600;
+$lightblue: #778da9;
+$platinum: #e0e1dd;
+
+@font-face {
+  font-family: 'bigHeader';
+  src: url('./fonts/Showtime.ttf');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'searchResult';
+  src: url('./fonts/FONT_BIGJOHN/BigJohnPRO-Regular.otf');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'otherHeader';
+  src: url('./fonts/FONT_HEADER_OTHER/budmo\ jiggler.ttf');
+  font-style: normal;
+}
+
+/*@font-face {
+  font-family: 'searchResult';
+  src: url('./fonts/FONT_BIGJOHN/BigJohnPRO-Bold.otf');
+  font-style: bold;
+}*/
+
+/*HEADER*/
+header{
+    width: 80%;
+    //max-width: 800px;
+    height: 200px;
+    border: 15px solid;
+    border-color: $flamingopink;    
+    background-color: $tequilasunrise;
+    padding: 3% 15%;    
+    margin: 3% auto 5% auto;  
+    display: block;  
+}
+
+header h1{
+  font-family: bigHeader;
+    display: block;
+    text-align: center;
+    font-weight: 800;
+    color: $black;
+    text-shadow: -1px 1px 0 $greytext,
+    2px 2px 0 $greytext,
+    2px -2px 0 $greytext,
+    -1px -1px 0 $greytext;
+    font-size: 70px;
+}
+  
+  /*FRÅN TIDIGARE PROJEKT, SKA ÄNDRAS*/
+  /*MUS, LÄNKAR HOVER, AFTER*/
+
+
+/* Meny */
+nav {
+  font-family: searchResult;
+    background-color: $springwater;
+    box-shadow: $tropicalbreeze;
+    font-size: 1.4em;
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    width: 250px;
+    display: hidden;
+    font-weight: $bold;
+  
+  
+  ul {
+    /*width: 100%;*/
+    list-style-type: none;
+    text-align: center;
+    margin: 0 0 0 auto;
+    padding: 0;
+  }
+  
+  li {
+    padding: 0.8em 0;
+    /*width: 100%;*/  
+  }
+  
+  a {
+    /*width: 100%;*/
+    text-decoration: none;
+    padding: 0 1em;  
+   
+  }
+} 
+  /*
+  nav li:hover {
+    background-color: $dark-pink;
+    color: white;
+    cursor: pointer;
+  }*/
+
+  nav a:hover{
+    background-color: $tropicalbreeze;
+    color: $platinum;
+    cursor: pointer;
+  }
+
+  nav li:visited{
+    font-style: italic;
+    color: $platinum;
+  }
+
+  nav a:visited{
+    color:$platinum;
+    font-style: italic;
+  }
+  
+  /*Meny-knapp, öppnameny*/
+  .menu-btn {
+    font-family: searchResult;
+    font-style: normal;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    padding: 16px 30px;
+    background-color: $florence;  
+    border: $flamingopink solid 4px;
+    border-radius: 15px;
+    color: $greytext;
+    cursor: pointer;
+  }
+  
+  .open {
+    margin: auto auto 5px auto;
+    width: 150px;
+    padding: auto;
+    display: block;
+  }
+  
+  .menu-btn:hover, .menu-text:hover {
+    background-color: $tequilasunrise;
+    color: $black;
+    box-shadow: 0 0px 5px rgba(0, 0, 0, 0.421);
+    font-style: bold;
+  }
+
+  //THUMBNAIL SÖKRESULTAT
+  /*.results-item-thumbnail img{
+    width: 100px;
+    height: auto;
+  }*/
+
+  .misc-info li{
+    list-style-type: none;
+  }
+
+  footer{
+    width: 90%;
+    background-color: $florence;
+    border: 10px solid $homebody;
+    padding: 3%;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .hide-search-list {
+    display: none;
+  }
+  

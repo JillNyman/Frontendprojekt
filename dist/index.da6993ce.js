@@ -1,0 +1,2 @@
+async function e(){try{let e=await fetch("https://polisen.se/api/events");return await e.json()}catch(e){throw console.error("Fetch error:",e),e}}async function t(){try{let t=await e();console.log(t);let n=Object.keys(data.type);!function(e){let t=document.getElementById("test-polis");e.forEach(e=>{let n=document.createElement("p"),o=document.createTextNode(e);n.appendChild(o),t.appendChild(n)})}(n)}catch(e){return console.log("Försöket lyckades inte")}}window.onload=function(){t()};
+//# sourceMappingURL=index.da6993ce.js.map
